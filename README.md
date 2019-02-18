@@ -109,6 +109,52 @@ Response:
     }
 ]
 
+##Update Todo
+
+Request:
+sh
+curl \
+  -X POST \
+  http://localhost:6000/updateTodo?id=5c6afca9a309fe7aa57b30ea\
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0ODEyNjUxMjgsImlkIjoiNTg0NjViNGVhNmZlODg2ZDMyMTVjNmRmIn0.1IsGGxko1qMCsKkJDQ1NfmrZ945XVC9uZpcvDnKwpL0"
+  
+ Json
+ 
+ {
+	"TaskName":"PLAY CRICKET",
+	"TaskDesc":"ON A CRICKET MATCH",
+}
+
+Response
+
+ {
+        "id": "5c6afca9a309fe7aa57b30ea",
+        "UserId": "5c6af5b3a309fe6c5b677bb1",
+        "TaskName": "PLAY CRICKET",
+        "TaskDesc": "ON A  CRICKET MATCH",
+        "Notes": "PICKING UP FOODS",
+        "TaskDate": "2019-02-19T00:12:49.8+05:30",
+        "Status": 0
+    }
+    
+    
+    
+ ##Status Update
+ 
+ Request:
+sh
+curl \
+  -X POST \
+  http://localhost:6000/setStatus?id=5c6afca9a309fe7aa57b30ea\
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0ODEyNjUxMjgsImlkIjoiNTg0NjViNGVhNmZlODg2ZDMyMTVjNmRmIn0.1IsGGxko1qMCsKkJDQ1NfmrZ945XVC9uZpcvDnKwpL0"
+  
+ Response
+ 
+ {Task completed}
+ 
+ 
+
+
 
 
 
